@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/music_list_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/media_playlist_bg">
+
+    <ImageView
+        android:id="@+id/music_list_cancel"
+        android:layout_width="73dp"
+        android:layout_height="73dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="17dp"
+        android:scaleType="center"/>
+    <!--android:src="@drawable/music_pop_list_dismiss"    aimee-->
+
+    <TextView
+        android:id="@+id/music_list_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="75dp"
+        android:paddingBottom="34dp"
+        android:paddingTop="34dp"
+        android:text="播放列表"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/music_list_music_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="75dp"
+        android:paddingBottom="34dp"
+        android:paddingTop="34dp"
+        android:textSize="15sp" />
+
+    <com.tencent.dingdangsampleapp.view.xlistview.XListView
+        android:id="@+id/music_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/music_list_play"
+        android:cacheColorHint="#30FF0000"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+</RelativeLayout>

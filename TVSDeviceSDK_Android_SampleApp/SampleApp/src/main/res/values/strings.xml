@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">TVSSDKSampleApp</string>
+    <string name="update_entities">更新实体库</string>
+    <string name="update_state">更新状态</string>
+
+    <string name="template_ui">模板界面</string>
+    <string name="web_template_ui">web模板</string>
+    <string name="auth">账号授权</string>
+    
+    <string name="setting">设置</string>
+    <string name="play_prev">上一首</string>
+    <string name="play_next">下一首</string>
+    <string name="speech_recognize_name">语音语义识别</string>
+    <string name="guideword">引导语</string>
+
+    <string name="env_formal">正式环境</string>
+    <string name="env_formal_value">0</string>
+    <string name="env_test">测试环境</string>
+    <string name="env_test_value">1</string>
+    <string name="env_exp">体验环境</string>
+    <string name="env_exp_value">2</string>
+    <string name="env_dev">开发环境</string>
+    <string name="env_dev_value">3</string>
+
+    <string-array name="env_list">
+        <item>正式环境</item>
+        <item>测试环境</item>
+        <item>体验环境</item>
+        <item>开发环境</item>
+    </string-array>
+
+    <string-array name="env_list_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <!--listview相关-->
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_end">没有更多了</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="xlistview_header_hint_success">刷新成功</string>
+    <string name="xlistview_header_hint_failt">刷新失败</string>
+
+
+</resources>

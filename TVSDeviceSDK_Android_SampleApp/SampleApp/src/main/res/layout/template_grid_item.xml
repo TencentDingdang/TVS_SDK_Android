@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="56.5dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/item_cover"
+        android:layout_width="@dimen/album_icon_width"
+        android:layout_height="@dimen/album_icon_width"
+        android:layout_above="@+id/item_name"
+        android:layout_marginBottom="21dp">
+
+        <ImageView
+            android:id="@+id/item_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:scaleType="fitXY" />
+
+        <Button
+            android:id="@+id/item_index"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="10dp"
+            android:clickable="false"
+            android:text="1"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_item_time"
+        android:layout_marginBottom="6dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="@dimen/album_item_name_text_size" />
+
+    <TextView
+        android:id="@+id/item_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:maxWidth="@dimen/album_icon_width"
+        android:textSize="@dimen/album_item_name_text_size" />
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/layout_item_time"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content">-->
+    <!--<TextView-->
+    <!--android:id="@+id/album_item_time"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:maxWidth="@dimen/album_icon_width"-->
+    <!--android:maxLines="1"-->
+    <!--android:ellipsize="end"-->
+    <!--android:textSize="@dimen/album_item_name_text_size"-->
+    <!--android:textColor="@color/g_30_black_color"/>-->
+    <!--<ImageView-->
+    <!--android:id="@+id/album_item_playing_frame"-->
+    <!--android:layout_width="19.7dp"-->
+    <!--android:layout_height="18dp"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_toRightOf="@+id/album_item_time"-->
+    <!--android:layout_marginLeft="9.5dp"-->
+    <!--android:background="@drawable/album_playing_frame_anim"-->
+    <!--android:visibility="gone"/>-->
+    <!--</RelativeLayout>-->
+</LinearLayout>

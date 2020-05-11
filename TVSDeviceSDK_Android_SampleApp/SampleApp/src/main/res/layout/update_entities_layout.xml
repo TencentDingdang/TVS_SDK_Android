@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RadioGroup
+        android:id="@+id/radio_operate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginBottom="15dip"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radio_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加" />
+
+        <RadioButton
+            android:id="@+id/radio_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="删除" />
+
+        <RadioButton
+            android:id="@+id/radio_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="更新" />
+
+        <RadioButton
+            android:id="@+id/radio_cover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="覆盖" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/projectid_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:gravity="bottom">
+
+        <TextView
+            android:id="@+id/projectid_tv"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:paddingLeft="15dp"
+            android:text="projectId："  />
+
+        <EditText
+            android:id="@+id/projectid_et"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:lines="1"
+            android:hint="projectId"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/type_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:gravity="bottom">
+
+        <TextView
+            android:id="@+id/type_tv"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:paddingLeft="15dp"
+            android:text="type："  />
+
+        <EditText
+            android:id="@+id/type_et"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:lines="1"
+            android:hint="sys.music.song"
+            android:text="sys.music.song"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/name_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:gravity="bottom">
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:paddingLeft="15dp"
+            android:text="name：" />
+
+        <EditText
+            android:id="@+id/name_et"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:lines="1"
+            android:hint="name"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/original_name_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:gravity="bottom">
+
+        <TextView
+            android:id="@+id/original_name_tv"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:paddingLeft="15dp"
+            android:text="原name:" />
+
+        <EditText
+            android:id="@+id/original_name_et"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:lines="1"
+            android:hint="originalName"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:gravity="bottom">
+
+        <Button
+            android:id="@+id/add_btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="添加" />
+
+        <Button
+            android:id="@+id/commit_btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="提交" />
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="清空输入" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/entities_info_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="16dp"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="15dp" />
+
+</LinearLayout>

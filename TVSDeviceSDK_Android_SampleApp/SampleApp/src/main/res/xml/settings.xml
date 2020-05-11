@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="SDK版本">
+        <Preference
+            android:defaultValue="0"
+            android:key="version_num"
+            android:title="Version"/>
+    </PreferenceCategory>
+
+    <Preference
+        android:checked="false"
+        android:key="clear_auth"
+        android:title="退出授权" />
+
+    <PreferenceCategory android:title="环境设置">
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/env_list"
+            android:entryValues="@array/env_list_value"
+            android:key="env_switch"
+            android:title="切换环境（需要重新授权）" />
+        <SwitchPreference
+            android:checked="false"
+            android:key="sanbox"
+            android:title="是否开启沙箱" />
+        <SwitchPreference
+            android:checked="true"
+            android:key="down_channel"
+            android:title="是否开启下行通道" />
+        <SwitchPreference
+            android:checked="false"
+            android:key="suspend"
+            android:title="是否挂起链接" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="识别">
+        <SwitchPreference
+            android:checked="false"
+            android:key="asr_only"
+            android:title="语音识别only"
+            android:summary="只进行语音识别，不进行语义理解"  />
+        <!--<SwitchPreference
+            android:key="wakeup"
+            android:checked="true"
+            android:title="自动唤醒"
+            android:visibility="gone"
+            android:summary="进入主界面，自动开启唤醒收音"
+            />-->
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="测试">
+        <Preference
+            android:checked="false"
+            android:key="log_report_test"
+            android:summary="用于触发SDK层的日志上报功能"
+            android:title="上报日志" />
+        <SwitchPreference
+            android:checked="false"
+            android:key="stat_report"
+            android:title="统计上报"
+            android:summary="会话统计上报，包括端到端耗时"  />
+    </PreferenceCategory>
+</PreferenceScreen>
