@@ -6,10 +6,9 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Build;
-import android.support.annotation.ColorRes;
-import android.support.annotation.DimenRes;
+import androidx.annotation.ColorRes;
+import androidx.annotation.DimenRes;
 import android.util.AttributeSet;
-import android.view.View;
 import android.widget.TextView;
 
 import java.util.ArrayList;

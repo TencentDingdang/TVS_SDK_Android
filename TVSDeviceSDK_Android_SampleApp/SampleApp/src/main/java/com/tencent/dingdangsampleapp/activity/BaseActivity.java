@@ -3,11 +3,11 @@ package com.tencent.dingdangsampleapp.activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentActivity;
+import androidx.annotation.Nullable;
 import android.util.Log;
 import android.view.MotionEvent;
 
+import androidx.fragment.app.FragmentActivity;
 import com.tencent.dingdangsampleapp.BuildConfig;
 
 public abstract class BaseActivity extends FragmentActivity {

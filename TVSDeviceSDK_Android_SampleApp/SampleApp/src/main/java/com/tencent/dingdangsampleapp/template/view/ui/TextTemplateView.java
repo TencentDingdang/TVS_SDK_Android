@@ -1,7 +1,7 @@
 package com.tencent.dingdangsampleapp.template.view.ui;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import com.tencent.dingdangsampleapp.R;
 

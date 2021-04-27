@@ -7,6 +7,7 @@ import com.tencent.ai.tvs.api.DialogManager;
 import com.tencent.ai.tvs.api.TVSApi;
 import com.tencent.ai.tvs.capability.userinterface.data.ASRTextMessageBody;
 import com.tencent.ai.tvs.capability.userinterface.data.UIDataMessageBody;
+import com.tencent.ai.tvs.tvsinterface.DialogExtraData;
 import com.tencent.ai.tvs.tvsinterface.DialogOptions;
 import com.tencent.ai.tvs.tvsinterface.IAuthInfoListener;
 import com.tencent.ai.tvs.tvsinterface.IMediaPlayer;
@@ -248,16 +249,29 @@ public class TVSSDKProxy {
         }
 
         @Override
-        public void onGetResponse(int recoType, String dialogRequestId, String tag) {
-            Log.i(TAG, "onGetResponse : " + dialogRequestId + " tag = " + tag);
+        public void onGetSessionId(String dialogRequestId, String sessionId) {
+            Log.i(TAG, "onGetSessionId : " + dialogRequestId + " sessionId = " + sessionId);
             if (mListener != null) {
-                mListener.printLog("收到服务器数据", false);
+                mListener.printLog("获取到sessionId：" + sessionId, false);
             }
         }
 
         @Override
-        public void onRecognizationFinished(int recoType, String dialogRequestId, String sessionId, String tag) {
-            Log.i(TAG, "onRecognizationFinished : " + dialogRequestId + ", sessionId : " + sessionId + " tag = " + tag);
+        public void onGetResponse(int recoType, String dialogRequestId, String sessionId, String tag) {
+            Log.i(TAG, "onGetResponse : " + dialogRequestId + " sessionId = " + sessionId + " tag = " + tag);
+            if (mListener != null) {
+                mListener.printLog("收到服务器数据, sessionId：" + sessionId, false);
+            }
+        }
+
+        @Override
+        public void onRecognizationFinished(int errorCode, int recoType, String dialogRequestId, String sessionId,
+                String tag, DialogExtraData dialogExtraData) {
+            Log.i(TAG, "onRecognizationFinished : " + dialogRequestId + ", sessionId : " + sessionId + " tag = " + tag
+                    + " errorCode = " + errorCode);
+            if (dialogExtraData != null) {
+                Log.i(TAG, "onRecognizationFinished, dialogExtraData : " + dialogExtraData.toString());
+            }
             if (mListener != null) {
                 mListener.printLog("会话结束", false);
             }

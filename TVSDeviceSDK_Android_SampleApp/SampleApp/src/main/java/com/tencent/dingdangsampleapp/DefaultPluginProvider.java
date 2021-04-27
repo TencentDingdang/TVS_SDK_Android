@@ -99,4 +99,9 @@ public class DefaultPluginProvider implements IPluginProvider {
         option.addOption(CapabilityOption.OPTION_COMMUNICATION);
         return option;
     }
+
+    @Override
+    public IMediaPlayer getVideoTTSPlayer() {
+        return null;
+    }
 }

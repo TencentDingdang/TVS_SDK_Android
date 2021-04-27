@@ -1,10 +1,10 @@
 package com.tencent.dingdangsampleapp.template;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
-import android.support.v4.util.Pools;
+import androidx.annotation.Nullable;
 import android.util.Log;
 
+import androidx.core.util.Pools;
 import com.tencent.dingdangsampleapp.template.data.AudioTmplData;
 import com.tencent.dingdangsampleapp.template.data.BaseAIData;
 import com.tencent.dingdangsampleapp.template.data.BaseTemplateData;

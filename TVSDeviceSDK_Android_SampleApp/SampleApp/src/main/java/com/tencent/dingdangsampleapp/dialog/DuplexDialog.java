@@ -2,7 +2,7 @@ package com.tencent.dingdangsampleapp.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -48,8 +48,8 @@ public class DuplexDialog extends Dialog implements View.OnClickListener {
                 }
 
                 @Override
-                public void onFullDuplexStop() {
-                    Log.i(TAG, "onFullDuplexStop");
+                public void onFullDuplexStop(String reason) {
+                    Log.i(TAG, "onFullDuplexStop : " + reason);
                 }
             });
         }
@@ -76,13 +76,13 @@ public class DuplexDialog extends Dialog implements View.OnClickListener {
                 dialogManager.enableDuplex();
                 break;
             case R.id.disable_duplex:
-                dialogManager.stopDuplex(true);
+                dialogManager.stopDuplex(true, null);
                 break;
             case R.id.start_duplex:
                 boolean started = dialogManager.startDuplex();
                 break;
             case R.id.stop_duplex:
-                dialogManager.stopDuplex(false);
+                dialogManager.stopDuplex(false, null);
                 break;
             default:
                 break;

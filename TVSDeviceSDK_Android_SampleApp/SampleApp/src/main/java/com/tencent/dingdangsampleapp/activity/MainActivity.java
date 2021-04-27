@@ -7,9 +7,7 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
+import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
@@ -20,6 +18,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import com.tencent.ai.tvs.api.DialogManager;
 import com.tencent.ai.tvs.api.TVSApi;
 import com.tencent.ai.tvs.capability.userinterface.data.ASRTextMessageBody;
@@ -213,8 +213,10 @@ public class MainActivity extends Activity implements View.OnClickListener, TVSS
         }
 
         @Override
-        public void onInitTokenFailed(String grantType, int errorCode, String errorMsg, GatewayRespHeader gatewayRespHeader) {
-            Log.e(TAG, "onInitTokenFailed ：" + grantType + ", errorCode : " + errorMsg + ", errorMsg : " + errorMsg);
+        public void onInitTokenFailed(String grantType, int errorCode, String errorMsg,
+                GatewayRespHeader serverRespHeader, String respBodyPayload) {
+            Log.e(TAG, "onInitTokenFailed ：" + grantType + ", errorCode : " + errorCode
+                    + ", errorMsg : " + errorMsg + ", respBodyPayload : " + respBodyPayload);
             // 云端授权失败，此时SDK内部已经存储了clientId等授权信息，可以等有网的时候重试
 
             mHandler.post(new Runnable() {
